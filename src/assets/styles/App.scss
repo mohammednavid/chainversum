@@ -27,8 +27,10 @@ $particleColor: hsl(180, 100%, 80%);
         align-items: flex-start;
         justify-content: space-between;
         padding-top: 10%;
+        overflow: hidden;
         @media screen and (max-width: 1000px) {
           flex-direction: column;
+          padding: 50px 0;
         }
         .banner_left {
           padding-top: 8%;
@@ -90,6 +92,9 @@ $particleColor: hsl(180, 100%, 80%);
           .banner_image {
             width: 100%;
             user-select: none;
+            @media screen and (max-width: 1000px) {
+                width: 120%;
+              }
           }
         }
       }
@@ -111,7 +116,7 @@ $particleColor: hsl(180, 100%, 80%);
             margin: 35px 55px;
           }
           @media screen and (max-width: 600px) {
-            margin: 25px 40px;
+            margin: 25px 20px;
           }
         }
       }
