@@ -1,8 +1,5 @@
-$particleBaseSize: 8;
-$particleNum: 200;
-$particleColor: hsl(180, 100%, 80%);
-
 .home {
+  transition: 0.3s all linear;
   .home_container {
     //   max-width: 1920px;
     //   margin: 0 auto;
@@ -11,15 +8,16 @@ $particleColor: hsl(180, 100%, 80%);
     //     padding: 0 5%;
     //   }
     .banner {
-      max-width: 1920px;
-      margin: 0 auto;
       background-image: url("../images/banner_bg.svg");
       background-repeat: no-repeat;
       background-size: contain;
       background-position-x: right;
+      max-width: 1920px;
+      margin: 0 auto;
       padding: 0 7%;
       @media screen and (max-width: 1000px) {
         background-size: cover;
+        overflow: hidden;
         padding: 0 5%;
       }
       .banner_container {
@@ -27,7 +25,6 @@ $particleColor: hsl(180, 100%, 80%);
         align-items: flex-start;
         justify-content: space-between;
         padding-top: 10%;
-        overflow: hidden;
         @media screen and (max-width: 1000px) {
           flex-direction: column;
           padding: 50px 0;
@@ -51,7 +48,7 @@ $particleColor: hsl(180, 100%, 80%);
               font-size: 16px;
             }
             @media screen and (min-width: 1301px) {
-              font-size: 18px;
+              font-size: 20px;
             }
             @media screen and (min-width: 1501px) {
               font-size: 24px;
@@ -84,6 +81,35 @@ $particleColor: hsl(180, 100%, 80%);
               font-size: 60px;
             }
           }
+          .banner_line {
+            @media screen and (min-width: 1001px) {
+              width: 10px;
+              height: 120px;
+              margin-top: 50px;
+              border-left: 1px solid rgba(255, 255, 255, 0.5);
+            }
+          }
+          .banner_circle {
+            @media screen and (min-width: 1001px) {
+              position: relative;
+              cursor: pointer;
+              height: 30px;
+              width: 16px;
+              border: 2px solid #fff;
+              margin-top: 15px;
+              border-radius: 15px;
+              margin-left: -9px;
+              &::after {
+                position: absolute;
+                content: "";
+                height: 6px;
+                width: 2px;
+                background: #fff;
+                bottom: 5px;
+                left: 7px;
+              }
+            }
+          }
         }
         .banner_right {
           width: 100%;
@@ -93,8 +119,9 @@ $particleColor: hsl(180, 100%, 80%);
             width: 100%;
             user-select: none;
             @media screen and (max-width: 1000px) {
-                width: 120%;
-              }
+              width: 180%;
+              margin-left: -45%;
+            }
           }
         }
       }
@@ -118,6 +145,136 @@ $particleColor: hsl(180, 100%, 80%);
           @media screen and (max-width: 600px) {
             margin: 25px 20px;
           }
+        }
+      }
+    }
+    .about {
+      max-width: 1920px;
+      margin: 0 auto;
+      padding: 5% 7% 0 7%;
+      @media screen and (max-width: 1000px) {
+        overflow: hidden;
+        background-size: cover;
+        padding: 0;
+        padding: 5% 5% 0 5%;
+      }
+      .primary_title {
+        opacity: 0.6;
+      }
+      .mobile_title {
+        padding-top: 30px;
+        @media screen and (min-width: 1001px) {
+          display: none;
+        }
+      }
+      .about_container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5% 0;
+        @media screen and (max-width: 1000px) {
+          flex-direction: column;
+          padding: 25px 0;
+        }
+        .about_left,
+        .about_right {
+          width: 50%;
+          @media screen and (max-width: 1000px) {
+            width: 100%;
+          }
+        }
+        .about_center {
+          width: 12%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .about_divider {
+            height: 300px;
+            margin-bottom: 25px;
+          }
+          @media screen and (max-width: 1000px) {
+            display: none;
+          }
+        }
+        .about_left {
+          .about_image {
+            width: 100%;
+            @media screen and (max-width: 600px) {
+              width: 200%;
+              margin-left: -70%;
+            }
+          }
+        }
+        .about_right {
+          .secondary_title {
+            @media screen and (max-width: 1000px) {
+              display: none;
+            }
+          }
+          .descp {
+            padding-top: 25px;
+          }
+        }
+        ul {
+          li {
+            position: relative;
+            display: flex;
+            margin-top: -12px;
+            .radio {
+              border: 1px solid #84e4a4;
+              height: 15px;
+              min-width: 15px;
+              border-radius: 50%;
+              margin-top: 8px;
+              margin-right: 15px;
+              position: relative;
+              span {
+                position: absolute;
+                top: 3px;
+                left: 3px;
+                background: #84e4a4;
+                height: 9px;
+                min-width: 9px;
+                border-radius: 50%;
+              }
+            }
+            strong {
+              color: #84e4a4;
+            }
+          }
+        }
+      }
+      .about_container2 {
+        @media screen and (max-width: 1000px) {
+          flex-direction: column-reverse;
+          .secondary_title,
+          .descp {
+            text-align: left;
+            margin-right: auto;
+          }
+        }
+        .about_image2 {
+          width: 100%;
+        }
+      }
+    }
+    .services {
+      max-width: 1920px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 5% 7% 0 7%;
+      @media screen and (max-width: 1000px) {
+        overflow: hidden;
+        padding: 0;
+        padding: 5% 5% 0 5%;
+      }
+      .primary_title {
+        font-family: Gilroy Bold;
+        .descp {
+          font-family: Gilroy;
+          opacity: 0.6;
         }
       }
     }
