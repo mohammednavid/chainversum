@@ -193,15 +193,16 @@ function App() {
               </h1>
               <Roadmap />
             </div>
-            <div className="services ">
+            <div className="services">
+              <div className="process_title"></div>
               <h1 className="primary_title">
                 <span className="descp">Process</span>
                 <br />
                 how we work
               </h1>
-                <br />
-                <br />
-              {/* <Process /> */}
+              <br />
+              <br />
+              <Process />
             </div>
           </div>
         </section>
