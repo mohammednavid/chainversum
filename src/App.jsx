@@ -17,6 +17,10 @@ import banner5 from "./assets/images/banner5.png";
 import Background from "./components/Background";
 import Particles from "./components/Particles";
 import Services from "./components/Services";
+import FeedbackSlider from "./components/FeedbackSlider";
+import Platforms from "./components/Platforms";
+import Roadmap from "./components/Roadmap";
+import Process from "./components/Process";
 
 function App() {
   return (
@@ -158,16 +162,50 @@ function App() {
               </h1>
             </div>
           </div>
-          <div className="services">
-            <h1 className="primary_title">
-              <span className="descp">WHAT WE OFFER</span>
-              <br />
-              Awesome services
-            </h1>
-            <Services />
+          <div className="services_bg">
+            <div className="services">
+              <h1 className="primary_title">
+                <span className="descp">WHAT WE OFFER</span>
+                <br />
+                Awesome services
+              </h1>
+              <Services />
+            </div>
+            <div className="services feedback">
+              <h1 className="primary_title">
+                <span className="descp">Client Feedback</span>
+                <br />
+                What do people say about us?
+              </h1>
+            </div>
+            <FeedbackSlider />
+            <div className="services ">
+              <h1 className="primary_title">
+                Blockchain Development Platforms we work on
+              </h1>
+              <Platforms />
+            </div>
+            <div className="services ">
+              <h1 className="primary_title">
+                <span className="descp">ROADMAP</span>
+                <br />
+                The timeline of our business
+              </h1>
+              <Roadmap />
+            </div>
+            <div className="services ">
+              <h1 className="primary_title">
+                <span className="descp">Process</span>
+                <br />
+                how we work
+              </h1>
+                <br />
+                <br />
+              <Process />
+            </div>
           </div>
         </section>
-        <Footer />
+        {/* <Footer /> */}
       </main>
     </>
   );

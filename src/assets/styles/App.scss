@@ -220,24 +220,6 @@
             position: relative;
             display: flex;
             margin-top: -12px;
-            .radio {
-              border: 1px solid #84e4a4;
-              height: 15px;
-              min-width: 15px;
-              border-radius: 50%;
-              margin-top: 8px;
-              margin-right: 15px;
-              position: relative;
-              span {
-                position: absolute;
-                top: 3px;
-                left: 3px;
-                background: #84e4a4;
-                height: 9px;
-                min-width: 9px;
-                border-radius: 50%;
-              }
-            }
             strong {
               color: #84e4a4;
             }
@@ -258,6 +240,11 @@
         }
       }
     }
+    .services_bg {
+      background-image: url("../images/bg.svg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
     .services {
       max-width: 1920px;
       margin: 0 auto;
@@ -265,7 +252,9 @@
       flex-direction: column;
       align-items: center;
       padding: 5% 7% 0 7%;
+      overflow: visible;
       @media screen and (max-width: 1000px) {
+        background: none;
         overflow: hidden;
         padding: 0;
         padding: 5% 5% 0 5%;
@@ -275,6 +264,40 @@
         .descp {
           font-family: Gilroy;
           opacity: 0.6;
+        }
+      }
+    }
+    .feedback {
+      background: none;
+      overflow: visible;
+      overflow: hidden;
+    }
+    .platform {
+      padding: 7% 0;
+      @media screen and (max-width: 1000px) {
+        padding: 50px 0;
+      }
+      .platform_container {
+        display: flex;
+        align-items: flex-start;
+        max-width: 940px;
+        margin: 0 auto;
+        padding: 15px 0;
+        .platform_details {
+          margin-top: -5px;
+          .primary_title {
+            text-align: left;
+          }
+          .platform_text {
+            font-size: 18px;
+            line-height: 150%;
+          }
+        }
+        img {
+          height: 55px;
+          width: 55px;
+          border-radius: 8px;
+          margin-right: 25px;
         }
       }
     }
