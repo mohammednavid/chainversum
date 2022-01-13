@@ -67,6 +67,7 @@
   }
   .radio_img{
       display: none;
+      user-select:none;
     @media screen and (max-width: 1000px) {
         display: block;
     }

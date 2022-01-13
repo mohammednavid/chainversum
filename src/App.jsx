@@ -201,7 +201,7 @@ function App() {
               </h1>
                 <br />
                 <br />
-              <Process />
+              {/* <Process /> */}
             </div>
           </div>
         </section>
