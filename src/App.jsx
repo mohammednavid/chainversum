@@ -9,6 +9,7 @@ import about from "./assets/images/about.svg";
 import economy from "./assets/images/economy.svg";
 import playIcon from "./assets/images/icons/playIcon.svg";
 import about_divider from "./assets/images/about_divider.svg";
+import advisor from "./assets/images/advisor.png";
 import banner1 from "./assets/images/banner1.png";
 import banner2 from "./assets/images/banner2.png";
 import banner3 from "./assets/images/banner3.png";
@@ -24,6 +25,7 @@ import Roadmap from "./components/Roadmap";
 import Process from "./components/Process";
 import Statistics from "./components/Statistics";
 import Teams from "./components/Teams";
+import AdvisorsCard from "./components/AdvisorsCard";
 
 function App() {
   return (
@@ -202,7 +204,7 @@ function App() {
 
             <div className="services">
               <div className="process_title"></div>
-              <img src={processEllipse2} alt="" className="process_title2"/>
+              <img src={processEllipse2} alt="" className="process_title2" />
               <h1 className="primary_title">
                 <span className="descp">Process</span>
                 <br />
@@ -247,6 +249,7 @@ function App() {
           <div className="team_bgContainer">
             <div className="team_bg"></div>
             <div className="services">
+            <div className="process_title"></div>
               <h1 className="primary_title">
                 <span className="descp">OUR BRAIN</span>
                 <br />
@@ -255,6 +258,33 @@ function App() {
               <br />
               <br />
               <Teams />
+            </div>
+
+            <div className="services">
+              <h1 className="primary_title">
+                <span className="descp">FAMILY</span>
+                <br />
+                Advisors
+              </h1>
+              <br />
+              <br />
+              <div className="container advisors_container">
+                <AdvisorsCard
+                  image={advisor}
+                  name="david drake"
+                  designation="Ceo"
+                />
+                <AdvisorsCard
+                  image={advisor}
+                  name="david drake"
+                  designation="Ceo"
+                />
+                <AdvisorsCard
+                  image={advisor}
+                  name="david drake"
+                  designation="Ceo"
+                />
+              </div>
             </div>
           </div>
         </section>

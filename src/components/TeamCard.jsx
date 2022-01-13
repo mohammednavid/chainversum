@@ -8,7 +8,7 @@ const TeamCard = ({image,name,designation}) => {
         <h3>{name}</h3>
         <p className="descp">{designation}</p>
       </div>
-      <div className="teamCard_social">
+      <div className="social">
         <i className="bi bi-twitter"></i>
         <i className="bi bi-instagram"></i>
         <i className="bi bi-linkedin"></i>

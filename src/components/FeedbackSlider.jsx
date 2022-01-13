@@ -10,7 +10,8 @@ const FeedbackSlider = () => {
     dots: true,
     dotsClass: "slick-dots slick-thumb",
     infinite: true,
-    speed: 500,
+    autoplay: true,
+    speed: 800,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
