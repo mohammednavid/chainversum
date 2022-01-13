@@ -125,26 +125,28 @@
           }
         }
       }
-      .banner_bottom {
-        max-width: 1200px;
-        width: 80%;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        padding: 10% 0;
+    }
+    .banner_bottom {
+      max-width: 1200px;
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 10% 0;
+      @media screen and (max-width: 1000px) {
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-around;
+      }
+      img {
+        height: 38px;
         @media screen and (max-width: 1000px) {
-          flex-wrap: wrap;
-          width: 100%;
+          margin: 35px 55px;
         }
-        img {
-          height: 38px;
-          @media screen and (max-width: 1000px) {
-            margin: 35px 55px;
-          }
-          @media screen and (max-width: 600px) {
-            margin: 25px 20px;
-          }
+        @media screen and (max-width: 600px) {
+          margin: 25px 15px;
+          height: 45px;
         }
       }
     }
@@ -281,6 +283,22 @@
         margin-top: 85vh;
       }
     }
+    .process_title2 {
+      position: absolute;
+      right: 0;
+      margin-top: -100px;
+      height: 500px;
+      width: 500px;
+      z-index: -1;
+      @media screen and (max-width: 1000px) {
+        margin-top: -150px;
+        height: 400px;
+      width: 400px;
+      }
+      @media screen and (max-width: 600px) {
+        display: none;
+      }
+    }
     .feedback {
       background: none;
       overflow: visible;
@@ -313,6 +331,59 @@
           border-radius: 8px;
           margin-right: 25px;
         }
+      }
+    }
+    .projects_container {
+      width: 100%;
+      text-align: center;
+      text-transform: uppercase;
+      background: #030528;
+      box-shadow: 0px 4px 52px rgba(132, 228, 164, 0.31);
+      position: relative;
+      margin: 5%;
+      @media screen and (max-width: 1000px) {
+        margin: 30px 5%;
+      }
+      @media screen and (max-width: 600px) {
+        margin: 20px 5%;
+        background: transparent;
+        box-shadow: none;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        left: -2px;
+        top: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(0deg, #030528 0%, #84e4a4 100%);
+        z-index: -1;
+        @media screen and (max-width: 600px) {
+          display: none;
+        }
+      }
+      .projects {
+        max-width: 1300px;
+        padding: 60px 0;
+        margin-bottom: 0;
+        @media screen and (max-width: 600px) {
+          padding: 0;
+        }
+      }
+    }
+    .team_bgContainer {
+      position: relative;
+      .team_bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin-top: -40vh;
+        background-image: url("../images/bg2.svg");
+        background-repeat: no-repeat;
+        // background-size: contain;
+        background-position-x: right;
+        background-position-y: top;
+        z-index: -1;
       }
     }
   }

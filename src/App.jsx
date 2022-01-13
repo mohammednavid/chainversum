@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
 import banner from "./assets/images/banner.svg";
+import processEllipse2 from "./assets/images/processEllipse2.svg";
 import about from "./assets/images/about.svg";
 import economy from "./assets/images/economy.svg";
 import playIcon from "./assets/images/icons/playIcon.svg";
@@ -21,6 +22,8 @@ import FeedbackSlider from "./components/FeedbackSlider";
 import Platforms from "./components/Platforms";
 import Roadmap from "./components/Roadmap";
 import Process from "./components/Process";
+import Statistics from "./components/Statistics";
+import Teams from "./components/Teams";
 
 function App() {
   return (
@@ -171,6 +174,7 @@ function App() {
               </h1>
               <Services />
             </div>
+
             <div className="services feedback">
               <h1 className="primary_title">
                 <span className="descp">Client Feedback</span>
@@ -179,12 +183,14 @@ function App() {
               </h1>
             </div>
             <FeedbackSlider />
+
             <div className="services ">
               <h1 className="primary_title">
                 Blockchain Development Platforms we work on
               </h1>
               <Platforms />
             </div>
+
             <div className="services ">
               <h1 className="primary_title">
                 <span className="descp">ROADMAP</span>
@@ -193,8 +199,10 @@ function App() {
               </h1>
               <Roadmap />
             </div>
+
             <div className="services">
               <div className="process_title"></div>
+              <img src={processEllipse2} alt="" className="process_title2"/>
               <h1 className="primary_title">
                 <span className="descp">Process</span>
                 <br />
@@ -203,6 +211,50 @@ function App() {
               <br />
               <br />
               <Process />
+            </div>
+
+            <div className="services">
+              <h1 className="primary_title">
+                <span className="descp">OUR DATA</span>
+                <br />
+                Statistic Information
+              </h1>
+              <br />
+              <br />
+              <Statistics />
+            </div>
+
+            <div className="services">
+              <h1 className="primary_title">
+                <span className="descp">OUR ACHIEVEMENTS SO FAR</span>
+                <br />
+                Projects
+              </h1>
+              <br />
+              <br />
+              <div className="projects_container">
+                <div className="banner_bottom projects">
+                  <img src={banner1} alt="" />
+                  <img src={banner2} alt="" />
+                  <img src={banner3} alt="" />
+                  <img src={banner4} alt="" />
+                  <img src={banner5} alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="team_bgContainer">
+            <div className="team_bg"></div>
+            <div className="services">
+              <h1 className="primary_title">
+                <span className="descp">OUR BRAIN</span>
+                <br />
+                AWESOME TEAM
+              </h1>
+              <br />
+              <br />
+              <Teams />
             </div>
           </div>
         </section>
