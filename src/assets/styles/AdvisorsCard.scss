@@ -11,6 +11,9 @@
   box-shadow: 0px 4px 52px rgba(132, 228, 164, 0.31);
   position: relative;
   padding-bottom: 10px;
+  @media screen and (max-width: 425px){
+    max-width: 280px;
+  }
   &::before {
     content: "";
     position: absolute;

@@ -15,6 +15,7 @@ import banner2 from "./assets/images/banner2.png";
 import banner3 from "./assets/images/banner3.png";
 import banner4 from "./assets/images/banner4.png";
 import banner5 from "./assets/images/banner5.png";
+import blog from "./assets/images/blog.png";
 
 import Background from "./components/Background";
 import Particles from "./components/Particles";
@@ -26,6 +27,9 @@ import Process from "./components/Process";
 import Statistics from "./components/Statistics";
 import Teams from "./components/Teams";
 import AdvisorsCard from "./components/AdvisorsCard";
+import NewsSlider from "./components/NewsSlider";
+import PressSlider from "./components/PressSlider";
+import BlogCard from "./components/BlogCard";
 
 function App() {
   return (
@@ -249,7 +253,7 @@ function App() {
           <div className="team_bgContainer">
             <div className="team_bg"></div>
             <div className="services">
-            <div className="process_title"></div>
+              <div className="process_title"></div>
               <h1 className="primary_title">
                 <span className="descp">OUR BRAIN</span>
                 <br />
@@ -283,6 +287,60 @@ function App() {
                   image={advisor}
                   name="david drake"
                   designation="Ceo"
+                />
+              </div>
+            </div>
+
+            <div className="services">
+              <br />
+              <h1 className="primary_title">
+                <span className="descp">IN THE WORLD</span>
+                <br />
+                Latest News
+              </h1>
+              <br />
+              <br />
+              <NewsSlider />
+            </div>
+
+            <div className="services">
+              <div className="team_bg team_bg2"></div>
+              <h1 className="primary_title">
+                <span className="descp">Latest news</span>
+                <br />
+                Press
+              </h1>
+              <br />
+              <br />
+              <PressSlider />
+            </div>
+
+            <div className="services">
+              <h1 className="primary_title">
+                <span className="descp">insights</span>
+                <br />
+                Our Blogs
+              </h1>
+              <br />
+              <br />
+              <div className="container blogs_container">
+                <BlogCard
+                  image={blog}
+                  title="New Trends in UI/UX"
+                  descp="Specially for our VIP customers the LH Crypto team representatives Alexander Smirnov and Antonis Lapos will conduct a number of personal meet."
+                  time="September, 15 2020"
+                />
+                <BlogCard
+                  image={blog}
+                  title="New Trends in UI/UX"
+                  descp="Specially for our VIP customers the LH Crypto team representatives Alexander Smirnov and Antonis Lapos will conduct a number of personal meet."
+                  time="September, 15 2020"
+                />
+                <BlogCard
+                  image={blog}
+                  title="New Trends in UI/UX"
+                  descp="Specially for our VIP customers the LH Crypto team representatives Alexander Smirnov and Antonis Lapos will conduct a number of personal meet."
+                  time="September, 15 2020"
                 />
               </div>
             </div>

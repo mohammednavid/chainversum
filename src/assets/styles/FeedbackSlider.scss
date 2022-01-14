@@ -11,7 +11,7 @@
     .slider_text {
       padding: 25px 35px;
       font-size: 20px;
-    //   text-align: justify;
+      //   text-align: justify;
       line-height: 120%;
       @media screen and (max-width: 1000px) {
         padding: 25px 5%;
@@ -36,8 +36,8 @@
         text-transform: uppercase;
       }
       .descp {
-          text-align: left;
-          font-size: 18px;
+        text-align: left;
+        font-size: 18px;
         line-height: 130%;
       }
       .slider_ratings {
@@ -67,8 +67,8 @@
     height: 30px;
     margin-left: -25px;
     @media screen and (max-width: 1000px) {
-        width: 0;
-        height: 0;
+      width: 0;
+      height: 0;
     }
     &::before {
       display: none;
