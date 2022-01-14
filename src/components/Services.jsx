@@ -3,6 +3,7 @@ import service1 from "../assets/images/service1.svg";
 import service2 from "../assets/images/service2.svg";
 import service3 from "../assets/images/service3.svg";
 import service4 from "../assets/images/service4.svg";
+import { Fade } from "react-reveal";
 
 const services = [
   {
@@ -38,14 +39,18 @@ const Services = () => {
   return (
     <div className="services_container">
       {services?.map((item) => (
-        <div className="service_card" key={item.id}>
-          <div className="service_cardInner">
-            <img src={item.image} alt={item.title} />
-            <h2 className="service_cardTitle">{item.title}</h2>
-            <p className="descp">{item.descp}</p>
+        <Fade delay={200} key={item.id}>
+          <div className="service_card">
+            <div className="service_cardInner">
+              <img src={item.image} alt={item.title} />
+              <h2 className="service_cardTitle">{item.title}</h2>
+              <p className="descp">{item.descp}</p>
+            </div>
+            <Fade bottom>
+              <button className="descp service_cardButton">Learn More</button>
+            </Fade>
           </div>
-          <button className="descp service_cardButton">Learn More</button>
-        </div>
+        </Fade>
       ))}
     </div>
   );

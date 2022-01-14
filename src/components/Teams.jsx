@@ -1,5 +1,6 @@
 import TeamCard from "./TeamCard";
 import teamCard from "../assets/images/teamCard.png";
+import { Fade } from "react-reveal";
 
 const teams = [
   { id: 1, image: teamCard, name: "david drake", designation: "ui designer" },
@@ -20,12 +21,13 @@ const Teams = () => {
   return (
     <div className="container teams_container">
       {teams.map((team) => (
-        <TeamCard
-          key={team.id}
-          image={team.image}
-          name={team.name}
-          designation={team.designation}
-        />
+        <Fade delay={200} key={team.id}>
+          <TeamCard
+            image={team.image}
+            name={team.name}
+            designation={team.designation}
+          />
+        </Fade>
       ))}
     </div>
   );
