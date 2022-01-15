@@ -1,29 +1,6 @@
 import { Fade } from "react-reveal";
 import chart from "../assets/images/chart.svg";
 import "../assets/styles/Statistics.scss";
-import { animated, useSpring } from "react-spring";
-import { useState } from "react";
-
-function AnimatedNumber({ num }) {
-  const [flip, set] = useState(false);
-  const { number } = useSpring({
-    from: { number: 0 },
-    number: num,
-    delay: 2500,
-    onRest: () => set(!flip),
-  });
-  return <animated.div>{number.to((n) => n.toFixed())}</animated.div>;
-}
-function SecondNumber() {
-  const [flip, set] = useState(false);
-  const { number } = useSpring({
-    from: { number: 0 },
-    number: 65,
-    delay: 2500,
-    onRest: () => set(!flip),
-  });
-  return <animated.div>{number.to((n) => n.toFixed())}</animated.div>;
-}
 
 const Statistics = () => {
   return (
@@ -84,27 +61,19 @@ const Statistics = () => {
       <Fade delay={200}>
         <div className="stats_bottom">
           <div className="stats_bottomContainer">
-            <h1 className="stats_number">
-              <AnimatedNumber num={67} />
-            </h1>
+            <h1 className="stats_number">67</h1>
             <p className="stats_name">Blockchain Projects</p>
           </div>
           <div className="stats_bottomContainer">
-            <h1 className="stats_number">
-              <AnimatedNumber num={12} />
-            </h1>
+            <h1 className="stats_number">12</h1>
             <p className="stats_name">NFT Projects</p>
           </div>
           <div className="stats_bottomContainer">
-            <h1 className="stats_number">
-              <AnimatedNumber num={147} />
-            </h1>
+            <h1 className="stats_number">147</h1>
             <p className="stats_name">Smart Contracts Deployed</p>
           </div>
           <div className="stats_bottomContainer">
-            <h1 className="stats_number">
-              <AnimatedNumber num={10} />
-            </h1>
+            <h1 className="stats_number">10</h1>
             <p className="stats_name">Fullstack Developer</p>
           </div>
         </div>
